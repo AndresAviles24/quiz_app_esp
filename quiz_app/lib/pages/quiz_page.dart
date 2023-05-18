@@ -17,7 +17,7 @@ class _QuizPageState extends State<QuizPage> {
   int totalOptions = 4;
   int questionIndex = 0;
   int progressIndex = 0;
-  Quiz quiz = Quiz(name: 'Quiz de Capitales', questions: []);
+  Quiz quiz = Quiz(name: 'Quiz de Don Quijote', questions: []);
 
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('assets/paises.json');
@@ -209,7 +209,8 @@ class _QuizPageState extends State<QuizPage> {
             onPressed: () {
               _optionSelected('Skipped');
             },
-            child: Text('Skip', style: Theme.of(context).textTheme.bodyText1),
+            child: Text('Skip (Anula pregunta)',
+                style: Theme.of(context).textTheme.bodyText1),
           ),
         ],
       ),
